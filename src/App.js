@@ -5,6 +5,8 @@ import ChildComponent from "./components/child";
 import ParentComponent from "./components/parent";
 import ParentComp from "./components/composition/parent";
 import ChildComp from "./components/composition/child";
+import BMW from "./components/hoc/bmw";
+import RangeRover from "./components/hoc/rangeRover";
 
 class App extends Component {
   state = {
@@ -90,6 +92,8 @@ class App extends Component {
             </div>
           )}
         </ParentComp>
+        <BMW></BMW>
+        <RangeRover></RangeRover>
       </React.Fragment>
     );
   }
