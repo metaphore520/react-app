@@ -7,6 +7,8 @@ import ParentComp from "./components/composition/parent";
 import ChildComp from "./components/composition/child";
 import BMW from "./components/hoc/bmw";
 import RangeRover from "./components/hoc/rangeRover";
+import CarComp from "./components/render-props/car";
+import PartsComp from "./components/render-props/PartsComp";
 
 class App extends Component {
   state = {
@@ -94,6 +96,15 @@ class App extends Component {
         </ParentComp>
         <BMW></BMW>
         <RangeRover></RangeRover>
+
+        <CarComp>
+          {(name, handleClickEvents) => (
+            <PartsComp
+              name={name}
+              handleClickEvents={handleClickEvents}
+            ></PartsComp>
+          )}
+        </CarComp>
       </React.Fragment>
     );
   }
