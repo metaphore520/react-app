@@ -3,6 +3,8 @@ import logo from "./logo.svg";
 import "./App.css";
 import ChildComponent from "./components/child";
 import ParentComponent from "./components/parent";
+import ParentComp from "./components/composition/parent";
+import ChildComp from "./components/composition/child";
 
 class App extends Component {
   state = {
@@ -80,6 +82,14 @@ class App extends Component {
             ></ParentComponent>
           </div>
         </div>
+        <ParentComp>
+          {(prop1, prop2) => (
+            <div>
+              <ChildComp prop1={prop1} prop2={prop2}></ChildComp>
+              <ChildComp prop1={prop1} prop2={prop2}></ChildComp>
+            </div>
+          )}
+        </ParentComp>
       </React.Fragment>
     );
   }
