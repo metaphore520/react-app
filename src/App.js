@@ -9,6 +9,10 @@ import BMW from "./components/hoc/bmw";
 import RangeRover from "./components/hoc/rangeRover";
 import CarComp from "./components/render-props/car";
 import PartsComp from "./components/render-props/PartsComp";
+import Elephant from "./components/context-api/elephant";
+import Zebra from "./components/context-api/zebra";
+import Ant from "./components/context-api/ant";
+import ThemeContext from "./components/context-api/context-all";
 
 class App extends Component {
   state = {
@@ -28,6 +32,7 @@ class App extends Component {
     ],
     CardTitle: "This is Card Title",
     CardFooter: "This is Card Footer",
+    theme: "dark-light",
   };
 
   constructor() {
@@ -55,6 +60,7 @@ class App extends Component {
     this.setState({ counter: tempCounter });
   };
   render() {
+    const { theme } = this.state;
     console.log("RENDER PHASE.....................");
     return (
       <React.Fragment>
@@ -105,6 +111,13 @@ class App extends Component {
             ></PartsComp>
           )}
         </CarComp>
+        <ThemeContext.Provider value={{ theme }}>
+          <Elephant>
+            <Zebra>
+              <Ant></Ant>
+            </Zebra>
+          </Elephant>
+        </ThemeContext.Provider>
       </React.Fragment>
     );
   }
@@ -113,7 +126,7 @@ class App extends Component {
     console.log("COMPONENT DID MOUNT PHASE.....................");
   }
   componentWillUnmount() {
-    console.log("COMPONENT WIL UN MOUNT PHASE.....................");
+    console.log("COMPONENT WILL UNMOUNT PHASE.....................");
   }
 }
 
