@@ -16,6 +16,8 @@ import ThemeContext from "./components/context-api/context-all";
 import AppFunc from "./components/useState/task";
 import TaskObj from "./components/useState/taskObj";
 import TaskObj_1 from "./components/useState/taskObj_1";
+import UseEffect from "./useEffect/use-effect";
+
 
 class App extends Component {
   state = {
@@ -122,9 +124,9 @@ class App extends Component {
           </Elephant>
         </ThemeContext.Provider>
         <AppFunc></AppFunc>
-        <h1>------------------------------------------</h1>
-         <TaskObj></TaskObj> 
-         <TaskObj_1></TaskObj_1>
+        <TaskObj></TaskObj>
+        <TaskObj_1></TaskObj_1>
+        <UseEffect></UseEffect>
       </React.Fragment>
     );
   }
