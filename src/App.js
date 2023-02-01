@@ -14,6 +14,8 @@ import Zebra from "./components/context-api/zebra";
 import Ant from "./components/context-api/ant";
 import ThemeContext from "./components/context-api/context-all";
 import AppFunc from "./components/useState/task";
+import TaskObj from "./components/useState/taskObj";
+import TaskObj_1 from "./components/useState/taskObj_1";
 
 class App extends Component {
   state = {
@@ -119,8 +121,10 @@ class App extends Component {
             </Zebra>
           </Elephant>
         </ThemeContext.Provider>
-
-       <AppFunc></AppFunc>
+        <AppFunc></AppFunc>
+        <h1>------------------------------------------</h1>
+         <TaskObj></TaskObj> 
+         <TaskObj_1></TaskObj_1>
       </React.Fragment>
     );
   }
