@@ -20,6 +20,9 @@ import UseEffect from "./useEffect/use-effect";
 import Main from "./UseCallbackUseMemory/main";
 import InputField from "./components/UseRefUseForwardRef/InputField";
 import MainComp from "./components/UseRefUseForwardRef/main";
+import PrimaryReducer from "./components/useReducer/primaryReducer";
+import SecondaryReducer from "./components/useReducer/secondaryReducer";
+import ComplexReducer from "./components/useReducer/complexReducer";
 
 class App extends Component {
   state = {
@@ -131,6 +134,9 @@ class App extends Component {
         <Main></Main>
         <InputField></InputField>
         <MainComp></MainComp>
+        <PrimaryReducer></PrimaryReducer>
+        <SecondaryReducer></SecondaryReducer>
+        <ComplexReducer></ComplexReducer>
       </React.Fragment>
     );
   }
