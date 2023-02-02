@@ -17,6 +17,7 @@ import AppFunc from "./components/useState/task";
 import TaskObj from "./components/useState/taskObj";
 import TaskObj_1 from "./components/useState/taskObj_1";
 import UseEffect from "./useEffect/use-effect";
+import Main from "./UseCallbackUseMemory/main";
 
 
 class App extends Component {
@@ -126,7 +127,8 @@ class App extends Component {
         <AppFunc></AppFunc>
         <TaskObj></TaskObj>
         <TaskObj_1></TaskObj_1>
-        <UseEffect></UseEffect>
+        {/* <UseEffect></UseEffect> */}
+        <Main></Main>
       </React.Fragment>
     );
   }
