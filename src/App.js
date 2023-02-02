@@ -18,7 +18,8 @@ import TaskObj from "./components/useState/taskObj";
 import TaskObj_1 from "./components/useState/taskObj_1";
 import UseEffect from "./useEffect/use-effect";
 import Main from "./UseCallbackUseMemory/main";
-
+import InputField from "./components/UseRefUseForwardRef/InputField";
+import MainComp from "./components/UseRefUseForwardRef/main";
 
 class App extends Component {
   state = {
@@ -127,8 +128,9 @@ class App extends Component {
         <AppFunc></AppFunc>
         <TaskObj></TaskObj>
         <TaskObj_1></TaskObj_1>
-        {/* <UseEffect></UseEffect> */}
         <Main></Main>
+        <InputField></InputField>
+        <MainComp></MainComp>
       </React.Fragment>
     );
   }
