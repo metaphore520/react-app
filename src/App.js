@@ -23,6 +23,8 @@ import MainComp from "./components/UseRefUseForwardRef/main";
 import PrimaryReducer from "./components/useReducer/primaryReducer";
 import SecondaryReducer from "./components/useReducer/secondaryReducer";
 import ComplexReducer from "./components/useReducer/complexReducer";
+import WindowResizer from "./components/customHook/windowResizer";
+
 
 class App extends Component {
   state = {
@@ -137,6 +139,7 @@ class App extends Component {
         <PrimaryReducer></PrimaryReducer>
         <SecondaryReducer></SecondaryReducer>
         <ComplexReducer></ComplexReducer>
+        <WindowResizer></WindowResizer>
       </React.Fragment>
     );
   }
