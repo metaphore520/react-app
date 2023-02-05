@@ -138,7 +138,7 @@ class App extends Component {
         <MainComp></MainComp>
         <PrimaryReducer></PrimaryReducer>
         <SecondaryReducer></SecondaryReducer>
-        <ComplexReducer></ComplexReducer>
+        {/* <ComplexReducer></ComplexReducer> */}
         <WindowResizer></WindowResizer>
       </React.Fragment>
     );

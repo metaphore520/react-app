@@ -1,9 +1,11 @@
 import { useLoaderData } from "react-router-dom";
 
-function Posts() {
+function Posts({ props }) {
   const contracts = useLoaderData();
   const data = [];
   const getData = () => {
+    console.log(props);
+    //console.log(params.contactId);
     console.log(contracts);
   };
   return (

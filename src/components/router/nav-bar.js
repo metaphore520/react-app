@@ -15,7 +15,7 @@ const NavBar = () => {
         {/* <a className="nav-link" href="#">
           Side Page
         </a> */}
-        <Link className="nav-link" to={`custompage`}>
+        <Link className="nav-link" to={`custompage/5`}>
           Side Page
         </Link>
       </li>

@@ -9,7 +9,7 @@ import ErrorPage from "./components/router/error-page";
 import Contact from "./components/router/contact";
 import Root from "./components/router/root";
 import Posts from "./components/router/posts";
-import { loaderPostData } from "./components/router/helper";
+import { loaderPostData, SumOfData } from "./components/router/helper";
 
 const router = createBrowserRouter([
   {
@@ -21,10 +21,11 @@ const router = createBrowserRouter([
         element: <App />,
       },
       {
-        path: "/custompage",
+        path: "/custompage/:contactId",
         element: <Posts />,
         errorElement: <ErrorPage />,
         loader: loaderPostData,
+        action: SumOfData,
         children: [
           {
             path: "contact/:contactId",

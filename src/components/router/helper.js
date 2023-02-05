@@ -4,19 +4,7 @@ export async function loaderPostData() {
     .then((json) => {
       return json;
     });
-  //console.log(contacts);
   return { contacts };
-
-  //   return {
-  //     data: contacts
-  //       .then((response) => {
-  //         //console.log(response);
-  //         response.json();
-  //       })
-  //       .then((json) => {
-  //         return json;
-  //       }),
-  //   };
 }
 
 async function getContacts() {
@@ -29,4 +17,21 @@ async function getContacts() {
   // .then((json) => {
   //   return json;
   // });
+}
+
+export async function SumOfData() {
+  let result = await Sum(10, 20);
+  console.log('Result Is Loading........');
+  return result;
+}
+
+async function Sum(a, b) {
+  return Promise(function (resolve, reject) {
+    setTimeout(function () {
+      if (typeof a != "number" || typeof b != "number") {
+        return reject(new TypeError("An Error Ocurred"));
+      }
+      resolve(a + b);
+    }, 2000);
+  });
 }
